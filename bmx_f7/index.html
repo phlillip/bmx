@@ -42,9 +42,12 @@
 
   </head>
   <body>
-    <audio autoplay="autoplay" loop="loop" controls="controls"><!-- autoplay="autoplay" -->
-      <source src="assets/FM-84-Never Stop (feat. Ollie Wride) [compressed].mp3" />
-    </audio>
+    <button id="pButton" class="pause btn-dance" onclick="playAudio()">
+      <audio id="music" autoplay="autoplay" loop="loop" controls="controls"><!-- autoplay="autoplay" -->
+        <source src="assets/FM-84-Never Stop (feat. Ollie Wride) [compressed].mp3" />
+      </audio>
+    </button>
+
     <!-- Status bar overlay for full screen mode (PhoneGap) -->
     <div class="statusbar-overlay"></div>
     <!-- Panels overlay-->
@@ -91,5 +94,20 @@
 
     <!-- Path to your app js-->
     <script type="text/javascript" src="js/app.js"></script>
+    <script>
+    var music = document.getElementById('music');
+
+function playAudio() {
+	if (music.paused) {
+		music.play();
+		pButton.className = "";
+		pButton.className = "pause btn-dance";
+	} else {
+		music.pause();
+		pButton.className = "";
+		pButton.className = "play";
+	}
+}
+    </script>
   </body>
 </html>

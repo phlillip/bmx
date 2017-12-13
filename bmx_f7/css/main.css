@@ -184,7 +184,27 @@
 }
 
 
+/* Audio */
 
+audio{
+	display: none;
+}
+
+#pButton{
+  position: absolute;
+  top:1.5em;
+  right:1.5em;
+  z-index: 10000;
+	height:3em;
+	width: 3em;
+	border: none;
+  border-radius: 1.5em;
+	background-size: 50% 50%;
+	background-position: center;
+  box-shadow: 0.06em 0.06em black;
+}
+.play{background: url('../img/icon_play.png') no-repeat, #7f7f7f;}
+.pause{background: url('../img/icon_pause.png') no-repeat, #ff1493;}
 
 
 
@@ -216,9 +236,7 @@ video{
   width: 100%;
   height: auto;
 }
-audio{
-	display: none;
-}
+
 
 .title{
   position: absolute;
@@ -274,12 +292,7 @@ audio{
   -webkit-animation-delay: 6s;
   opacity: 0;
 }
-@-webkit-keyframes fade-in {audio{
-	position: absolute;
-	top: 0;
-	right: 0;
-	z-index: 10000;
-}
+@-webkit-keyframes fade-in {
   0% {opacity: 0;}
   100% {opacity: 1;}
 }
@@ -323,4 +336,15 @@ audio{
   0% {text-shadow: .06em .06em black;}
   50% {text-shadow: .08em .08em black;}
   100% {text-shadow: .06em .06em black;}
+}
+
+/*button dance*/
+.btn-dance {
+  transform: scale(1);
+  animation: btn-dance 0.357142857s infinite;
+}
+@keyframes btn-dance {
+  0% {-webkit-transform: scale(1);}
+  25% {-webkit-transform: scale(1.05);}
+  100% {-webkit-transform: scale(1);}
 }
