@@ -42,6 +42,9 @@
 
   </head>
   <body>
+    <audio autoplay="autoplay" loop="loop" controls="controls"><!-- autoplay="autoplay" -->
+      <source src="assets/FM-84-Never Stop (feat. Ollie Wride) [compressed].mp3" />
+    </audio>
     <!-- Status bar overlay for full screen mode (PhoneGap) -->
     <div class="statusbar-overlay"></div>
     <!-- Panels overlay-->
@@ -56,15 +59,12 @@
             <div class="no-loading"></div>
           <div data-page="index" class="page">
             <!-- Scrollable page content -->
-            <audio loop="loop" controls="controls"><!-- autoplay="autoplay" -->
-             <source src="assets/FM-84-Never Stop (feat. Ollie Wride) [compressed].mp3" />
-          </audio>
             <div class="fade-out"></div>
-          <div class="page-content zoom-in"><!-- zoom-in -->
+          <div id="index" class="page-content zoom-in"><!-- zoom-in -->
             <div class="video-container centered">
-              <img style="position: absolute;z-index:100000;top:50%;transform: translateY(-50%);left:0;" src="img/pc.png" />
-              <div class="scanlines">
-                  <video loop muted><!-- autoplay="autoplay" -->
+              <img style="position: absolute;z-index:100000;top:50%;transform: translateY(-50%);left:0;" src="img/pc_new.png" />
+              <div class="scanlines centered">
+                  <video autoplay="autoplay" loop muted><!-- autoplay="autoplay" -->
                     <source src="/assets/bg-video-full.mp4" type="video/mp4">
                   </video>
               </div>
@@ -72,12 +72,12 @@
             </div>
           </div>
           <div class="title centered">
-            <h1 class="fade-in">The<br /> Pump<br />Track</h1>
+            <h1 class="fade-in"><span class="dance">The<br /> Pump<br />Track</span></h1>
           </div>
           </div>
         </div>
         <!-- Bottom Toolbar-->
-        <div class="toolbar"> <!-- fade-in-tools -->
+        <div class="toolbar fade-in-tools"> <!-- fade-in-tools -->
           <div class="toolbar-inner">
             <!-- Toolbar links -->
             <a href="about.html" class="link no-animation">&lt;Background&gt;</a>
