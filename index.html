@@ -26,6 +26,8 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel='stylesheet' href="css/scanlines.css">
+        <link rel='stylesheet' href="css/typography.css">
         <style>
         	body{
         		font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
@@ -103,9 +105,29 @@
 				display: block;
 				position: relative;
 				color: limeGreen;
-				text-shadow: 0.06em 0.06em black;
+				text-shadow: 0.06em 0.06em white;
+        	}
+<<<<<<< Updated upstream
+
+=======
+        	
+        	.video-container{
+				position: relative; /* If you want text inside of it */
+				margin: 0 auto;
+				margin: 1em;
+				overflow-x: hidden;
+				overflow-y: hidden;
+			}
+			.video-container ul{
+			    padding-left: 0;
         	}
 
+			video{
+				width: 100%;
+				height: auto;
+			}
+					
+>>>>>>> Stashed changes
         </style>
     </head>
     <body>
@@ -156,9 +178,24 @@
 
         <div class="title">
 	        <h1>Redditch Pump Track</h1>
-	        <h2>The history of UK BMX begins here</h2>
         </div>
+<<<<<<< Updated upstream
 
+=======
+        
+        <div class="video-container">
+			<ul class="scanlines">
+				<li id="video">
+					<video loop muted autoplay>
+						<source src="img/bg-video-full.mp4" type="video/mp4">
+					</video>
+				</li>
+			</ul>
+		</div>
+		
+        <h2>The history of UK BMX begins here</h2>
+        
+>>>>>>> Stashed changes
         <!--<div class="entry">
         	<span class="date">19<sup>th</sup> March 1980</span>
         	<h3>Communication begins&hellip;</h3>

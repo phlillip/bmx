@@ -42,7 +42,7 @@
         		text-transform: uppercase;
         	}
         	.entry{
-        		padding: 1em;
+        		padding: 1em 0;
         	}
         	img, video{
         		max-width: 100%;
@@ -57,11 +57,13 @@
         		margin-left: -1em;
         		margin-right: -1em;
         	}
-        	figcaption{
+          figcaption{
         		font-size: .9em;
-        		font-style: italic;
         		color: #555;
         		padding: .5em .5em 0 .5em;
+        	}
+          figcaption a{
+            border-bottom: 1px solid;
         	}
 
         	@media (min-width: 45em) {
@@ -108,6 +110,9 @@
 }
 .content-block{
   color: inherit;
+  padding: 0 1em;
+  max-width: 40em;
+  margin: 0 auto;
 }
 
 #title{
@@ -129,7 +134,7 @@
 
 }
 
- #about{
+#about{
     background: url(../img/track.jpg) no-repeat center, linear-gradient(to right bottom, darkOliveGreen, limeGreen);
     background-size: cover;
     background-blend-mode: multiply;
@@ -146,14 +151,17 @@
 	color: white;
 }
 #track{
-	background: url(../img/service-image.jpg) no-repeat center;
-    background-size: cover;
+	/*background: url(../img/service-image.jpg) no-repeat center;
+    background-size: cover;*/
 }
 
-.navbar-inner, .toolbar-inner {
+.navbar-inner, .toolbar-inner, .toolbar {
   background: #000084;
   font-family: DOS, Monaco, Menlo, Consolas, "Courier New", monospace;
-
+  text-align: center;
+}
+.toolbar::before{
+  background-color: #aa5500;
 }
 
 .navbar a.link, .toolbar a.link, .subnavbar a.link{
@@ -183,16 +191,18 @@
 
 
 
+
+
 .video-container{
   position: relative;
   box-sizing: border-box;
   z-index: 10;
   width: 100%;
   height: 100%;
-  padding: 8em 4em 0 4em;
+  padding: 29vw 13vw 0 13vw;
 overflow-x: hidden;
 overflow-y: hidden;
-background: url(https://electricthrift.files.wordpress.com/2013/03/mac128_front.jpg) no-repeat center;
+background: url() no-repeat center;
 background-size: contain;
 }
 video{
@@ -203,6 +213,18 @@ audio{
 	display: none;
 }
 
+.title{
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  font-size: 2em;
+}
+.title h1{
+  text-shadow: 0.06em 0.06em black;
+}
+
+
+/* Animation */
 .zoom-in {
   -webkit-animation-name: zoom-in;
   -webkit-animation-duration:5s;
@@ -220,15 +242,7 @@ audio{
 
     }
 }
-.title{
-  position: absolute;
-  z-index: 1000;
-  width: 100%;
-  font-size: 2em;
-}
-.title h1{
-  text-shadow: 0.06em 0.06em black;
-}
+
 .fade-out {
   -webkit-animation-name: fade-out;
   -webkit-animation-duration:3s;
@@ -239,12 +253,7 @@ audio{
   height: 100%;
   background: black;
   position: absolute;
-  z-index: 1000;audio{
-	position: absolute;
-	top: 0;
-	right: 0;
-	z-index: 10000;
-}
+  z-index: 1000;
 }
 @-webkit-keyframes fade-out {
   100% {opacity: 0;}

@@ -16,9 +16,19 @@
    dynamicNavbar: true
  });
 
-
- //The same but for Services page
+ //About hooks
  myApp.onPageInit('about', function (page) {
-   console.log('testing About page');
-   console.log(page);
+  document.getElementById('zx').innerHTML += '<div class="loading"></div>';
  });
+
+ //Timeline hooks
+myApp.onPageInit('timeline', function (page) {
+  document.getElementById('zx2').innerHTML += '<div class="loading"></div>';
+});
+
+//Track hooks
+
+//Interferes with 3d
+myApp.onPageInit('track', function (page) {
+// document.getElementById('zx').innerHTML += '<div class="loading"></div>';
+});

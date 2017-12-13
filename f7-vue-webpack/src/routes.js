@@ -16,7 +16,11 @@ export default [
       component: require('./pages/form.vue')
   },
   {
-      path: '/dynamic-route/blog/:blogId/post/:postId/',
-      component: require('./pages/dynamic-route.vue')
+      path: '/track/',
+      component: require('./pages/track.vue')
+  },
+  {
+      path: '/credits/',
+      component: require('./pages/credits.vue')
   }
 ]

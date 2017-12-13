@@ -35,9 +35,8 @@ var light = new THREE.HemisphereLight( 0xeeeeee, 0x888888, 1 );
 // Central gem
 var geometrycenter = new THREE.SphereGeometry( 0.5, 6, 7 );
 
-var materialcenter = new THREE.MeshPhongMaterial( { 
+var materialcenter = new THREE.MeshBasicMaterial( { 
 	color: 0x32cd32, 
-        shading: THREE.FlatShading,
         polygonOffset: true,
         polygonOffsetFactor: 0.5, // positive value pushes polygon further away
         polygonOffsetUnits: 0.5
