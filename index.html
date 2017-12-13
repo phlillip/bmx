@@ -1,14 +1,32 @@
-<!doctype html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title></title>
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Your app title -->
+    <title>BMX</title>
+    <!-- Framework7 resources-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/framework7/1.6.5/css/framework7.ios.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/framework7/1.6.5/css/framework7.ios.colors.min.css">-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/framework7/1.6.5/js/framework7.min.js"></script>
 
-        <script src="pwabuilder-sw-register.js"></script>
-        <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+    <!--conditionally load AR resources -->
+    <!--<script src="js/3d.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+-->
+<script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/tizzle/aframe-orbit-controls-component/master/dist/aframe-orbit-controls-component.min.js"></script>
+    <!-- Custom resources-->
+    <script src="pwabuilder-sw-register.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/scanlines.css">
+    <link rel="stylesheet" href="css/zx.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="192x192" href="img/favicons/android-chrome-192x192.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
@@ -22,95 +40,7 @@
 		<meta name="msapplication-config" content="img/favicons/browserconfig.xml">
 		<meta name="theme-color" content="#ff1493">
 
-        <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel='stylesheet' href="css/scanlines.css">
-        <link rel='stylesheet' href="css/typography.css">
-        <style>
-        	body{
-        		font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-        		background: #000;
-        		color: #ffffff;
-        		line-height: 1.5;
-        	}
-        	nav{
-        		background: deeppink;
-        		padding: 1em;
-        		width: 2.5em;
-        		height: 2.5em;
-        		border-radius: 2.5em;
-        		border: 0.25em solid #000000;
-        		position: fixed;
-        		text-align: center;
-        		left: calc(50% - 2.5em);
-        		bottom: 1em;
-        	}
-        	ul,ol{
-			    padding-left: 1em;
-        	}
-        	h1,h2,h3{
-        		margin-bottom: 1em;
-        	}
-        	h3{
-        		font-style: italic;
-        		text-transform: uppercase;
-        	}
-        	.entry{
-        		padding: 1em;
-        	}
-        	.title{
-        		padding: 4em 1em;
-        		text-align: center;
-        	}
-        	img, video{
-        		max-width: 100%;
-        	}
-        	figure{
-        		border-top: 1px solid #ccc;
-        		border-bottom: 1px solid #ccc;
-        		border: 0;
-        		background: #f5f5f5;
-        		padding: 1em;
-        		margin: 0;
-        		margin-left: -1em;
-        		margin-right: -1em;
-        	}
-        	figcaption{
-        		font-size: .9em;
-        		font-style: italic;
-        		color: #555;
-        		padding: .5em .5em 0 .5em;
-        	}
-
-        	@media (min-width: 45em) {
-        		body{
-        			font-size: 1.5em;
-	        	}
-        		.funnel{
-        			margin: 0 auto;
-        			max-width: 45em;
-        		}
-        	}
-        	@font-face {
-				  font-family: 'Lazer84';
-				  src: url('Lazer84.ttf')  format('truetype');
-				}
-        	h1{
-				font-family: "Lazer84", sans-serif;
-				letter-spacing: .1em;
-				margin-right: -.1em;
-				text-align: center;
-				display: block;
-				position: relative;
-				color: limeGreen;
-				text-shadow: 0.06em 0.06em white;
-        	}
-<<<<<<< Updated upstream
-
-=======
-        	
         	.video-container{
 				position: relative; /* If you want text inside of it */
 				margin: 0 auto;
@@ -126,8 +56,7 @@
 				width: 100%;
 				height: auto;
 			}
-					
->>>>>>> Stashed changes
+
         </style>
     </head>
     <body>
@@ -179,10 +108,7 @@
         <div class="title">
 	        <h1>Redditch Pump Track</h1>
         </div>
-<<<<<<< Updated upstream
 
-=======
-        
         <div class="video-container">
 			<ul class="scanlines">
 				<li id="video">
@@ -192,10 +118,9 @@
 				</li>
 			</ul>
 		</div>
-		
+
         <h2>The history of UK BMX begins here</h2>
-        
->>>>>>> Stashed changes
+
         <!--<div class="entry">
         	<span class="date">19<sup>th</sup> March 1980</span>
         	<h3>Communication begins&hellip;</h3>
@@ -524,13 +449,56 @@ in Shortlands-Bromley England and spoke to Mr. Bob Phelps, director. Bob Osborn 
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-        <script>
-            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-        </script>
-        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+=======
+  </head>
+  <body>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Views -->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main">
+        <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+          <!-- Page, "data-page" contains page name -->
+            <div class="no-loading"></div>
+          <div data-page="index" class="page">
+            <!-- Scrollable page content -->
+            <audio autoplay="autoplay" audio loop="loop" controls="controls">
+             <source src="assets/FM-84-Never Stop (feat. Ollie Wride) [compressed].mp3" />
+          </audio>
+            <div class="fade-out"></div>
+          <div class="page-content zoom-in">
+            <div class="video-container centered">
+              <div class="scanlines">
+                  <video loop muted autoplay>
+                    <source src="/assets/bg-video-full.mp4" type="video/mp4">
+                  </video>
+              </div>
+            </div>
+          </div>
+          <div class="title centered">
+            <h1 class="fade-in">The<br /> Pump<br />Track</h1>
+          </div>
+          </div>
         </div>
-    </body>
+        <!-- Bottom Toolbar-->
+        <div class="toolbar fade-in-tools">
+          <div class="toolbar-inner">
+            <!-- Toolbar links -->
+            <a href="about.html" class="link no-animation">&lt;Background&gt;</a>
+            <a href="timeline.html" class="link no-animation">&lt;Timeline&gt;</a>
+            <a href="track.html" class="link no-animation">&lt;3D Track&gt;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+>>>>>>> 6bb2e11ce42db16888f51bd93b4e840090538763
+
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
 </html>
