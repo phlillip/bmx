@@ -1,0 +1,303 @@
+/**
+ * @Author: alcwynparker
+ * @Date:   2017-12-07T22:57:52+00:00
+ * @Last modified by:   alcwynparker
+ * @Last modified time: 2017-12-07T23:13:23+00:00
+ */
+ .page{
+ 	background: #000;
+ }
+
+*{
+    box-sizing: border-box;
+}
+        	body{
+        		font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+            font-family: DOS, Monaco, Menlo, Consolas, "Courier New", monospace;
+        		background: #000;
+        		color: #ffffff;
+        		line-height: 1.5;
+        		font-size: 1em;
+        	}
+        	.nav{
+        		background: deeppink;
+        		padding: 1em;
+        		width: 2.5em;
+        		height: 2.5em;
+        		border-radius: 2.5em;
+        		position: fixed;
+        		text-align: center;
+        		left: calc(50% - 2.5em);
+        		bottom: 2em;
+				 box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        	}
+        	ul,ol{
+			    padding-left: 1em;
+        	}
+        	h1,h2,h3{
+        		margin-bottom: 1em;
+        	}
+        	h3{
+        		font-style: italic;
+        		text-transform: uppercase;
+        	}
+        	.entry{
+        		padding: 1em 0;
+        	}
+        	img, video{
+        		max-width: 100%;
+        	}
+        	figure{
+        		border-top: 1px solid #ccc;
+        		border-bottom: 1px solid #ccc;
+        		border: 0;
+        		background: #f5f5f5;
+        		padding: 1em;
+        		margin: 0;
+        		margin-left: -1em;
+        		margin-right: -1em;
+        	}
+          figcaption{
+        		font-size: .9em;
+        		color: #555;
+        		padding: .5em .5em 0 .5em;
+        	}
+          figcaption a{
+            border-bottom: 1px solid;
+        	}
+
+        	@media (min-width: 45em) {
+        		body{
+        			font-size: 1.5em;
+	        	}
+        		.funnel{
+        			margin: 0 auto;
+        			max-width: 45em;
+        		}
+        	}
+
+@font-face {
+  font-family: 'Lazer84';
+  src: url('../assets/Lazer84.ttf')  format('truetype');
+}
+@font-face {
+  font-family: 'Dos';
+  src: url('../assets/Perfect DOS VGA 437.ttf')  format('truetype');
+}
+        	h1{
+				font-family: "Lazer84", sans-serif;
+				letter-spacing: .1em;
+				margin-right: -.1em;
+				text-align: center;
+				display: block;
+				position: relative;
+				color: limeGreen;
+				text-shadow: 0.06em 0.06em white;
+        	}
+
+
+
+.centered{
+	display: block;
+	position: relative;
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.page{
+
+}
+.content-block{
+  color: inherit;
+  padding: 0 1em;
+  max-width: 40em;
+  margin: 0 auto;
+}
+
+#title{
+	position: absolute;
+	z-index: 100;
+    background-size: cover;
+    background-blend-mode: hard-light;
+}
+#title span{
+	font-family: "Lazer84", sans-serif;
+	letter-spacing: .1em;
+	margin-right: -.1em;
+	font-size:4em;
+	text-align: center;
+	display: block;
+	position: relative;
+	color: limeGreen;
+	text-shadow: .06em .06em black;
+
+}
+
+#about{
+    background: url(../img/track.jpg) no-repeat center, linear-gradient(to right bottom, darkOliveGreen, limeGreen);
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: white;
+    text-shadow: 0.06em 0.06em dimgrey;
+}
+ #contact{
+    background: #000;
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: white;
+}
+#contact .label, .list-block input[type=date], .list-block input[type=datetime-local], .list-block input[type=email], .list-block input[type=number], .list-block input[type=password], .list-block input[type=search], .list-block input[type=tel], .list-block input[type=text], .list-block input[type=time], .list-block input[type=url], .list-block select, .list-block textarea {
+	color: white;
+}
+#track{
+	/*background: url(../img/service-image.jpg) no-repeat center;
+    background-size: cover;*/
+}
+
+.navbar-inner, .toolbar-inner, .toolbar {
+  background: #000084;
+  font-family: DOS, Monaco, Menlo, Consolas, "Courier New", monospace;
+  text-align: center;
+}
+.toolbar::before{
+  background-color: #aa5500;
+}
+
+.navbar a.link, .toolbar a.link, .subnavbar a.link{
+  color: #fefe54;
+  padding: 0 8px;
+}
+.navbar a.link:hover, .toolbar a.link:hover, .subnavbar a.link:hover{
+  color:  #fefe54;
+  background: #aa5500;
+}
+
+/* page transitions */
+.page-on-left {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.page-on-center {
+}
+
+
+
+
+
+
+
+/*PC Zoom*/
+
+
+
+
+
+.video-container{
+  position: relative;
+  box-sizing: border-box;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  padding: 29vw 13vw 0 13vw;
+overflow-x: hidden;
+overflow-y: hidden;
+background: url() no-repeat center;
+background-size: contain;
+}
+video{
+  width: 100%;
+  height: auto;
+}
+audio{
+	display: none;
+}
+
+.title{
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  font-size: 2em;
+}
+.title h1{
+  text-shadow: 0.06em 0.06em black;
+}
+
+
+/* Animation */
+.zoom-in {
+  -webkit-animation-name: zoom-in;
+  -webkit-animation-duration:5s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-delay: 2s;
+}
+@-webkit-keyframes zoom-in {
+  0% {
+    -webkit-transform: scale(1) translate(0,0);
+  }
+  100% {
+    -webkit-transform: scale(3.75) translate(0, 4em);
+
+    }
+}
+
+.fade-out {
+  -webkit-animation-name: fade-out;
+  -webkit-animation-duration:3s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+  width: 100%;
+  height: 100%;
+  background: black;
+  position: absolute;
+  z-index: 1000;
+}
+@-webkit-keyframes fade-out {
+  100% {opacity: 0;}
+}
+.fade-in {
+  -webkit-animation-name: fade-in;
+  -webkit-animation-duration:2s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-delay: 6s;
+  opacity: 0;
+}
+@-webkit-keyframes fade-in {audio{
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 10000;
+}
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.fade-in-tools {
+  -webkit-animation-name: fade-in-tools;
+  -webkit-animation-duration:1s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: step-end;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-delay: 8s;
+  opacity: 0;
+}
+@-webkit-keyframes fade-in-tools {
+  0% {opacity: 0;}
+  10% {opacity: 1;}
+  20% {opacity: 0;}
+  30% {opacity: 1;}
+  40% {opacity: 0;}
+  45% {opacity: 1;}
+  50% {opacity: 0;}
+  54% {opacity: 1;}
+  58% {opacity: 0;}
+  61% {opacity: 1;}
+  64% {opacity: 0;}
+  66% {opacity: 1;}
+  68% {opacity: 0;}
+  100% {opacity: 1;}
+}

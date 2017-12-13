@@ -1,0 +1,151 @@
+/* =========
+Your custom styles go here
+ ========= */
+ 
+ .page{
+ 	background: #000;
+ }
+ 
+        	body{
+        		font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+        		background: #000;
+        		color: #ffffff;
+        		line-height: 1.5;
+        		font-size: 1em;
+        	}
+        	.nav{
+        		background: deeppink;
+        		padding: 1em;
+        		width: 2.5em;
+        		height: 2.5em;
+        		border-radius: 2.5em;
+        		position: fixed;
+        		text-align: center;
+        		left: calc(50% - 2.5em);
+        		bottom: 2em;
+				 box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        	}
+        	ul,ol{
+			    padding-left: 1em;
+        	}
+        	h1,h2,h3{
+        		margin-bottom: 1em;
+        	}
+        	h3{
+        		font-style: italic;
+        		text-transform: uppercase;
+        	}
+        	.entry{
+        		padding: 1em;
+        	}
+        	.title{
+        		padding: 4em 1em;
+        		text-align: center;
+        	}
+        	img, video{
+        		max-width: 100%;
+        	}
+        	figure{
+        		border-top: 1px solid #ccc;
+        		border-bottom: 1px solid #ccc;
+        		border: 0;
+        		background: #f5f5f5;
+        		padding: 1em;
+        		margin: 0;
+        		margin-left: -1em;
+        		margin-right: -1em;
+        	}
+        	figcaption{
+        		font-size: .9em;
+        		font-style: italic;
+        		color: #555;
+        		padding: .5em .5em 0 .5em;
+        	}
+        	
+        	@media (min-width: 45em) {
+        		body{
+        			font-size: 1.5em;
+	        	}
+        		.funnel{
+        			margin: 0 auto;
+        			max-width: 45em;
+        		}
+        	}
+        	@font-face {
+				  font-family: 'Lazer84';
+				  src: url('Lazer84.ttf')  format('truetype');
+				}
+        	h1{
+				font-family: "Lazer84", sans-serif;
+				letter-spacing: .1em;
+				margin-right: -.1em;
+				text-align: center;
+				display: block;
+				position: relative;
+				color: limeGreen;
+				text-shadow: 0.06em 0.06em white;
+        	}
+        	
+        	.video-container{
+				position: relative; /* If you want text inside of it */
+				margin: 0 auto;
+				margin: 1em;
+				overflow-x: hidden;
+				overflow-y: hidden;
+			}
+			.video-container ul{
+			    padding-left: 0;
+        	}
+
+			video{
+				width: 100%;
+				height: auto;
+			}
+
+.centered{
+	display: block;
+	position: relative;
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#title{
+	position: absolute;
+	z-index: 100;
+    background-size: cover;
+    background-blend-mode: hard-light;
+}
+#title span{
+	font-family: "Lazer84", sans-serif;
+	letter-spacing: .1em;
+	margin-right: -.1em;
+	font-size:4em;
+	text-align: center;
+	display: block;
+	position: relative;
+	color: limeGreen;
+	text-shadow: .06em .06em black;
+	
+}
+
+ #about{
+    background: url("track.jpg") no-repeat center, linear-gradient(to right bottom, darkOliveGreen, limeGreen);
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: white;
+    text-shadow: 0.06em 0.06em dimgrey;
+}
+ #contact{
+    background: #000;
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: white;
+}
+#contact .label, .list-block input[type=date], .list-block input[type=datetime-local], .list-block input[type=email], .list-block input[type=number], .list-block input[type=password], .list-block input[type=search], .list-block input[type=tel], .list-block input[type=text], .list-block input[type=time], .list-block input[type=url], .list-block select, .list-block textarea {
+	color: white;
+}
+#track{
+	background: url(service-image.jpg) no-repeat center;
+    background-size: cover;
+}
