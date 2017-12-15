@@ -39,8 +39,3 @@ Shows a cube with pink transparency shading when used with a hiro marker.
 ## Critical Reflective Journal
 
 [http://ma.philpenny.co.uk](http://ma.philpenny.co.uk)
-
-# Github Files
-
-## Email chains
-
