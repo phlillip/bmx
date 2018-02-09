@@ -16,6 +16,11 @@
 			line-height: 2em;
 			text-align: center;
 		}
+		h2{
+			font-size: 1.25em;
+			line-height: 2em;
+			text-align: center;
+		}
 		table.colours{
 			width: 100%;
 			border-collapse: collapse;
@@ -123,6 +128,7 @@
 		C918.8,553.1,854.9,489.2,776,489.2z M776,760c-70.7,0-128-57.3-128-128c0-70.7,57.3-128,128-128c70.7,0,128,57.3,128,128
 		C904,702.7,846.7,760,776,760z"/>
 </svg>
+<h2 id="partText">Click on a bike part to select it</h2>
 		</section>
 		<section class="content">
 			<table class="colours">
@@ -149,11 +155,12 @@
 		<footer></footer>
 		<script>
 
-			var currentPart;	//global
+			var currentPart;	//TODO: change out global variable and use object properties instead
 
 			function partSelect(chosenPart){
-				currentPart = chosenPart.baseVal;
-				console.log(currentPart);
+				currentPart = chosenPart.baseVal;	//SVGAnimatedString has two values, baseVal and animVal
+				console.log(currentPart);			//checker
+				document.getElementById('partText').innerHTML = "Selected part is " + currentPart;
 			}
 
 			function changecol(chosen){
