@@ -10,7 +10,10 @@
 			margin: 0;
 			padding: 0;
 		}
-		body{background: ghostwhite;}
+		body{
+			background: ghostwhite;
+			max-width: 40em;
+		}
 		h1{
 			font-size: 1.5em;
 			line-height: 2em;
@@ -27,7 +30,7 @@
 		}
 		.colours td{
 			width: 20vw;
-			height: 20vw;
+			height: 5vw;
 		}
 		.colours td a{
 			display: block;
@@ -160,7 +163,7 @@
 			function partSelect(chosenPart){
 				currentPart = chosenPart.baseVal;	//SVGAnimatedString has two values, baseVal and animVal
 				console.log(currentPart);			//checker
-				document.getElementById('partText').innerHTML = "Selected part is " + currentPart;
+				document.getElementById('partText').innerHTML = "Currently selected part is " + currentPart;
 			}
 
 			function changecol(chosen){
