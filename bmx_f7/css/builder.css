@@ -1,0 +1,86 @@
+#builder #zx{
+  display: none;
+}
+  #bmx-art{
+  width: 80vw;
+  margin: 0 10vw;
+  max-width: calc(40em - 20vw);
+  height:auto;
+}
+  .colours li{
+  width: 17vw;
+  height: 17vw;
+}
+.colours li a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1vw solid transparent;
+}
+.colours li a:hover{
+  border: 1vw solid pink;
+}
+.bg-black a{background: black;}
+.bg-white a{background: white;}
+.bg-yellow a{background: yellow;}
+.bg-orange a{background: orange;}
+.bg-red a{background: red;}
+.bg-pink a{background: pink;}
+.bg-purple a{background: purple;}
+.bg-blue a{background: blue;}
+.bg-sky a{background: aqua;}
+.bg-green a{background: green;}
+.shop{
+  text-align: center;
+}
+.shop a.btn{
+  display: inline-block;
+  background: aqua;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.5em;
+  text-align: center;
+  padding: .5em 1em;
+  margin: 1em;
+}
+.st0{opacity: 0.25;}
+.st1{fill:url(#SVGID_1_);}
+.st2{fill:url(#SVGID_2_);}
+svg a:hover{
+  fill: rgba(255,0,0,0.25) !important;
+  cursor: pointer;
+}
+#info-box {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  background-color: #ffffff;
+  border: 2px solid #BF0A30;
+  border-radius: 5px;
+  padding: 5px;
+  font-family: arial;
+  text-align: center;
+  width: 100%;
+}
+
+ul.partsList,
+ul.colours,
+#partText{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: space-around;
+  list-style-type: none;
+  margin: 0;
+}
+ul.partsList li{
+  border: 1px solid blue;
+  padding: 0 1em;
+  margin-bottom: 1em;
+  font-size: 1.5em;
+}
+#partText{padding: 1em;}

@@ -13,6 +13,7 @@
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/framework7/1.6.5/css/framework7.ios.colors.min.css">-->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/framework7/1.6.5/js/framework7.min.js"></script>
 
+
     <!--conditionally load AR resources -->
     <!--<script src="js/3d.js"></script>
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
@@ -22,9 +23,11 @@
 <script src="https://cdn.rawgit.com/tizzle/aframe-orbit-controls-component/master/dist/aframe-orbit-controls-component.min.js"></script>
     <!-- Custom resources-->
     <script src="pwabuilder-sw-register.js"></script>
+    <script src="builder.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/scanlines.css">
-    <link rel="stylesheet" href="css/zx.css">
+    <link rel="stylesheet" href="css/zx.css" style type="text/css">
+    <link rel="stylesheet" href="css/builder.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
@@ -42,6 +45,12 @@
 
   </head>
   <body>
+    <button id="pButton" class="pause btn-dance" onclick="playAudio()">
+      <audio id="music" autoplay="autoplay" loop="loop" controls="controls"><!-- autoplay="autoplay" -->
+        <source src="assets/FM-84-Never Stop (feat. Ollie Wride) [compressed].mp3" />
+      </audio>
+    </button>
+
     <!-- Status bar overlay for full screen mode (PhoneGap) -->
     <div class="statusbar-overlay"></div>
     <!-- Panels overlay-->
@@ -56,15 +65,12 @@
             <div class="no-loading"></div>
           <div data-page="index" class="page">
             <!-- Scrollable page content -->
-            <audio loop="loop" controls="controls"><!-- autoplay="autoplay" -->
-             <source src="assets/FM-84-Never Stop (feat. Ollie Wride) [compressed].mp3" />
-          </audio>
             <div class="fade-out"></div>
-          <div class="page-content zoom-in"><!-- zoom-in -->
+          <div id="index" class="page-content zoom-in"><!-- zoom-in -->
             <div class="video-container centered">
-              <img style="position: absolute;z-index:100000;top:50%;transform: translateY(-50%);left:0;" src="img/pc.png" />
-              <div class="scanlines">
-                  <video loop muted><!-- autoplay="autoplay" -->
+              <img style="position: absolute;z-index:100000;top:50%;transform: translateY(-50%);left:0;" src="img/pc_new.png" />
+              <div class="scanlines centered">
+                  <video autoplay="autoplay" loop muted><!-- autoplay="autoplay" -->
                     <source src="/assets/bg-video-full.mp4" type="video/mp4">
                   </video>
               </div>
@@ -72,17 +78,18 @@
             </div>
           </div>
           <div class="title centered">
-            <h1 class="fade-in">The<br /> Pump<br />Track</h1>
+            <h1 class="fade-in"><span class="dance">The<br /> Pump<br />Track</span></h1>
           </div>
           </div>
         </div>
         <!-- Bottom Toolbar-->
-        <div class="toolbar"> <!-- fade-in-tools -->
+        <div class="toolbar fade-in-tools"> <!-- fade-in-tools -->
           <div class="toolbar-inner">
             <!-- Toolbar links -->
             <a href="about.html" class="link no-animation">&lt;Background&gt;</a>
             <a href="timeline.html" class="link no-animation">&lt;Timeline&gt;</a>
             <a href="track.html" class="link no-animation">&lt;3D Track&gt;</a>
+            <a href="builder.html" class="link no-animation">&lt;Builder&gt;</a>
           </div>
         </div>
       </div>
@@ -91,5 +98,20 @@
 
     <!-- Path to your app js-->
     <script type="text/javascript" src="js/app.js"></script>
+    <script>
+    var music = document.getElementById('music');
+
+function playAudio() {
+	if (music.paused) {
+		music.play();
+		pButton.className = "";
+		pButton.className = "pause btn-dance";
+	} else {
+		music.pause();
+		pButton.className = "";
+		pButton.className = "play";
+	}
+}
+    </script>
   </body>
 </html>

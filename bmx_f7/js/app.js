@@ -26,6 +26,11 @@ myApp.onPageInit('timeline', function (page) {
   document.getElementById('zx2').innerHTML += '<div class="loading"></div>';
 });
 
+//Builder hooks
+myApp.onPageInit('builder', function (page) {
+//  document.getElementById('zx2').innerHTML += '<div class="loading"></div>';
+});
+
 //Track hooks
 
 //Interferes with 3d

@@ -18,6 +18,8 @@
         		color: #ffffff;
         		line-height: 1.5;
         		font-size: 1em;
+            max-width: 40em;
+            margin: 0 auto;
         	}
         	.nav{
         		background: deeppink;
@@ -155,6 +157,12 @@
 #track{
 	/*background: url(../img/service-image.jpg) no-repeat center;
     background-size: cover;*/
+}
+#builder{
+    background: ghostwhite;
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: black;
 }
 
 .navbar-inner, .toolbar-inner, .toolbar {
