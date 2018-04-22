@@ -1,3 +1,19 @@
+//create object NOT array:
+  // ES6 defines ComputedPropertyName as part of the grammar for object literals, which allows you to write the code like this:
+  // https://stackoverflow.com/questions/2274242/using-a-variable-for-a-key-in-a-javascript-object-literal
+  var bmx = {
+    "brakes": "black",
+    "drivetrain": "black",
+    "frame": "black",
+    "gumwall": true,
+    "mag": "black",
+    "pads": false,
+    "seat": "black",
+    "tyres": "black",
+    "pedals": "black",
+    "grips": "black"
+    };
+
   function info(part){
     infoText = part.dataset.info;
     console.log(infoText);
@@ -8,19 +24,6 @@
   var currentPart;	//TODO: change out global variable and use object properties instead
 
   // Select bike part
-
-  function partSelect(chosenPart){
-    currentPart = chosenPart.baseVal;	//SVGAnimatedString has two values, baseVal and animVal
-    console.log(currentPart);			//checker
-
-    chosenList = document.getElementsByClassName(currentPart);
-      for (index = 0; index < chosenList.length; ++index) {
-        chosenList[index].setAttribute("style", "display:block, background: pink");
-      }
-
-    document.getElementById('partText').innerHTML = "Currently selected part is " + currentPart;
-  }
-
   function partTextSelect(chosenPart){
     currentPart = chosenPart;	//SVGAnimatedString has two values, baseVal and animVal
     console.log(currentPart);			//checker
@@ -33,11 +36,53 @@
     document.getElementById('partText').innerHTML = "Currently selected part is " + currentPart;
   }
 
+  // retro code for directly clicking on the bike
+/*  getElementsByClassNamefunction partSelect(chosenPart){
+    currentPart = chosenPart.baseVal;	//SVGAnimatedString has two values, baseVal and animVal
+    console.log(currentPart);			//checker
+
+    chosenList = document.getElementsByClassName(currentPart);
+      for (index = 0; index < chosenList.length; ++index) {
+        chosenList[index].setAttribute("style", "display:block, background: pink");
+      }
+
+    document.getElementById('partText').innerHTML = "Currently selected part is " + currentPart;
+  }
+  */
+
   // Change colour of selected bike parts
 
   function changecol(chosen){
       partsList = document.getElementsByClassName(currentPart);
+
+      //update relevant object value
+      bmx[currentPart] = chosen;
+
+      console.log(bmx);
+
+      //paint all relevant components
       for (index = 0; index < partsList.length; ++index) {
         partsList[index].setAttribute("fill", chosen);
       }
     }
+
+  // save BMX to local storage
+  function saveBike(){
+    localStorage.setItem("bmx", JSON.stringify(bmx));
+    console.log(bmx);
+  }
+
+ // retrieve colour scheme from local storage
+ //loop through object
+ //create variables from key names
+ //assign values to relevant variables
+function showColours(){
+    var retrievedData = localStorage.getItem("bmx");
+    var colourscheme = JSON.parse(retrievedData);
+    console.log(Object.length);
+for (let [key, value] of Object.entries(colourscheme)) {
+    console.log(key + ':' + value);
+    var nextItem = key + ": " + value;
+    document.getElementById(key).innerHTML = nextItem;
+  }
+}
