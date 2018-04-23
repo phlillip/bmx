@@ -10,7 +10,7 @@
 }
   .colours li{
   width: 17vw;
-  height: 17vw;
+  height: 8vw;
 }
 .colours li a{
   display: block;
@@ -76,12 +76,12 @@ ul.colours,
   align-items: center;
   align-content: space-around;
   list-style-type: none;
-  margin: 0;
+  margin: 1em;
 }
 ul.partsList li{
   border: 1px solid blue;
-  padding: 0 1em;
-  margin-bottom: 1em;
-  font-size: 1.5em;
+  padding: 0 .5em;
+  margin-bottom: .5em;
+  font-size: 1.25em;
 }
 #partText{padding: 1em;}

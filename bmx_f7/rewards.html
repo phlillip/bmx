@@ -3,23 +3,29 @@
 <div class="pages">
   <div data-page="rewards" class="page">
     <div class="page-content" id="rewards">
-      <div id="zx" class="content-block">
+      <div id="zx" class="content-block"></div>
+
+
+
         <h1>Rewards</h1>
         <p>Your chosen options are:</p>
-
-        <a href="#" class="frame" onclick="showColours()">see colour scheme</a>
-        <div id="brakes"></div>
-        <div id="drivetrain"></div>
-        <div id="frame"></div>
-        <div id="gumwall"></div>
-        <div id="mag"></div>
-        <div id="pads"></div>
-        <div id="seat"></div>
-        <div id="tyres"></div>
-        <div id="pedals"></div>
-        <div id="grips"></div>
-  </div>
+        <a href="#" onclick="showColours()">see colour scheme</a>
+        <div id="frame-id"></div>
+        <div id="wheels-id"></div>
+        <div id="tyres-id"></div>
+        <div id="drivetrain-id"></div>
+        <div id="seat-id"></div>
+        <div id="pedals-id"></div>
+        <div id="grips-id"></div>
+        <div id="gumwall-id"></div>
+        <div id="pads-id"></div>
+      </div>
       </div>
     </div>
   </div>
 </div>
+<script>
+window.addEventListener('load', function() {
+  console.log('All assets are loaded')
+})
+</script>

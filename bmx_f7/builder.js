@@ -2,16 +2,15 @@
   // ES6 defines ComputedPropertyName as part of the grammar for object literals, which allows you to write the code like this:
   // https://stackoverflow.com/questions/2274242/using-a-variable-for-a-key-in-a-javascript-object-literal
   var bmx = {
-    "brakes": "black",
-    "drivetrain": "black",
     "frame": "black",
-    "gumwall": true,
-    "mag": "black",
-    "pads": false,
-    "seat": "black",
+    "wheels": "black",
     "tyres": "black",
+    "drivetrain": "black",
+    "seat": "black",
     "pedals": "black",
-    "grips": "black"
+    "grips": "black",
+    "gumwall": true,
+    "pads": false
     };
 
   function info(part){
@@ -76,13 +75,24 @@
  //loop through object
  //create variables from key names
  //assign values to relevant variables
+ function pageLoad()
+     {
+         //All your code here
+     }
+
 function showColours(){
     var retrievedData = localStorage.getItem("bmx");
     var colourscheme = JSON.parse(retrievedData);
-    console.log(Object.length);
-for (let [key, value] of Object.entries(colourscheme)) {
-    console.log(key + ':' + value);
-    var nextItem = key + ": " + value;
-    document.getElementById(key).innerHTML = nextItem;
-  }
+    for (let [key, value] of Object.entries(colourscheme)) {
+        console.log(key + ':' + value);
+        var nextItem = key + ": " + value;
+        var identity = key + "-id";
+          document.getElementById(identity).innerHTML = nextItem;
+
+    }
+    console.log(colourscheme['frame']);
+    var frame = colourscheme['frame'];
+    alert("Frame colour is " + frame);
+    document.getElementById(frame).innerHTML = frame;
 }
+window.onload = 'pageLoad';
