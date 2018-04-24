@@ -95,4 +95,7 @@ function showColours(){
     alert("Frame colour is " + frame);
     document.getElementById(frame).innerHTML = frame;
 }
-window.onload = 'pageLoad';
+
+function closeModal(){
+  document.getElementById("onboarding").style.display = "none";
+}
