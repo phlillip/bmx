@@ -88,15 +88,20 @@ ul.colours,
 }
 .partsList li{
   width: 20%;
-  background: blue;
-  border: 1px solid #333333;
-  padding: 0 .5em;
   margin-bottom: .5em;
   font-size: 1.25em;
 }
 .partsList li a{
+  display: block;
+  background: blue;
   color: white;
+  border: 1px solid #333333;
   text-decoration: none;
+    padding: 0 .5em;
+}
+.partsList li a.unselected{
+  opacity: 0.5;
+  color: gray;
 }
   .colours li{
   width: 20%;

@@ -30,21 +30,22 @@
 <path id="tyre" class="tyres" d="M134.7,258.4C60.3,258.4,0,318.7,0,393.2s60.3,134.7,134.7,134.7s134.7-60.3,134.7-134.7
 	C269.5,318.7,209.2,258.4,134.7,258.4z M134.7,501c-59.5,0-107.8-48.3-107.8-107.8s48.3-107.8,107.8-107.8s107.8,48.3,107.8,107.8
 	S194.3,501,134.7,501z"/>
-<radialGradient id="gumwall_2_" cx="585.6531" cy="280.6929" r="193.9244" gradientTransform="matrix(0.6201 0 0 -0.6201 -228.4279 567.2391)" gradientUnits="userSpaceOnUse">
+<radialGradient id="gumwall_2_" class="gumwalls" cx="585.6531" cy="280.6929" r="193.9244" gradientTransform="matrix(0.6201 0 0 -0.6201 -228.4279 567.2391)" gradientUnits="userSpaceOnUse">
 	<stop  offset="0.9086" style="stop-color:#7E5A24"/>
 	<stop  offset="1" style="stop-color:#9D7031"/>
 </radialGradient>
-<path id="gumwall" class="st2" d="M134.7,272.9c-66.4,0-120.3,53.9-120.3,120.3c0,66.4,53.9,120.3,120.3,120.3
+<path class="pads" />
+<path id="gumwall" class="gumwalls st2" d="M134.7,272.9c-66.4,0-120.3,53.9-120.3,120.3c0,66.4,53.9,120.3,120.3,120.3
 	c66.4,0,120.3-53.9,120.3-120.3C255,326.7,201.2,272.9,134.7,272.9z M134.7,501c-59.5,0-107.8-48.3-107.8-107.8
 	s48.3-107.8,107.8-107.8s107.8,48.3,107.8,107.8S194.3,501,134.7,501z"/>
 <path id="tyre_1_" class="tyres" d="M633.3,258.4c-74.4,0-134.7,60.3-134.7,134.7s60.3,134.7,134.7,134.7c74.4,0,134.7-60.3,134.7-134.7
 	C768,318.7,707.7,258.4,633.3,258.4z M633.3,501c-59.5,0-107.8-48.3-107.8-107.8s48.3-107.8,107.8-107.8
 	c59.5,0,107.8,48.3,107.8,107.8S692.8,501,633.3,501z"/>
-<radialGradient id="gumwall_3_" cx="1389.597" cy="280.6929" r="193.925" gradientTransform="matrix(0.6201 0 0 -0.6201 -228.4279 567.2391)" gradientUnits="userSpaceOnUse">
+<radialGradient id="gumwall_3_" class="gumwalls" cx="1389.597" cy="280.6929" r="193.925" gradientTransform="matrix(0.6201 0 0 -0.6201 -228.4279 567.2391)" gradientUnits="userSpaceOnUse">
 	<stop  offset="0.9086" style="stop-color:#7E5A24"/>
 	<stop  offset="1" style="stop-color:#9D7031"/>
 </radialGradient>
-<path id="gumwall_1_" class="st3" d="M633.3,272.9c-66.4,0-120.3,53.9-120.3,120.3c0,66.4,53.9,120.3,120.3,120.3
+<path id="gumwall_1_" class="gumwalls st3" d="M633.3,272.9c-66.4,0-120.3,53.9-120.3,120.3c0,66.4,53.9,120.3,120.3,120.3
 	c66.4,0,120.3-53.9,120.3-120.3C753.5,326.7,699.7,272.9,633.3,272.9z M633.3,501c-59.5,0-107.8-48.3-107.8-107.8
 	s48.3-107.8,107.8-107.8c59.5,0,107.8,48.3,107.8,107.8S692.8,501,633.3,501z"/>
 <path id="crank--left" class="drivetrain" class="st4" d="M344.7,364.3c-3.7-3.7-9.7-3.7-13.4,0c-2.7,2.7-3.4,6.6-2.2,9.9L282.2,421l0,0
@@ -465,8 +466,8 @@
 					<li><a href="#" class="seat" onClick="partTextSelect(this.className)">Seat</a></li>
 					<li><a href="#" class="pedals" onClick="partTextSelect(this.className)">Pedals</a></li>
 					<li><a href="#" class="grip" onClick="partTextSelect(this.className)">Grips</a></li>
-          <li><a href="#" class="gumwalls" onClick="partTextSelect(this.className)">Gumwalls</a></li>
-          <li><a href="#" class="pads" onClick="partTextSelect(this.className)">Pads</a></li>
+          <li><a href="#" id="gumwallsButton" class="" onClick="optionSelect(this.id)">Gumwalls</a></li>
+          <li><a href="#" id="padsButton" class="unselected" onClick="optionSelect(this.id)">Pads</a></li>
 				</ul>
 							<ul class="colours">
 									<li class="bg-black"><a href="#" id="black" onClick="changecol(this.id)"></a></li>

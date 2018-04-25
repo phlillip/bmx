@@ -9,7 +9,7 @@
     "seat": "black",
     "pedals": "black",
     "grips": "black",
-    "gumwall": true,
+    "gumwalls": true,
     "pads": false
     };
 
@@ -63,6 +63,33 @@
       for (index = 0; index < partsList.length; ++index) {
         partsList[index].setAttribute("fill", chosen);
       }
+    }
+
+    // Toggle button and change boolean value of optional bike parts
+
+    function optionSelect(chosenid){
+
+      var status = document.getElementById(chosenid).classList.toggle("unselected");
+      console.log(status);
+
+      var chosenclass = chosenid.slice(0, -6);
+
+      partsList = document.getElementsByClassName(chosenclass);
+      bmx[chosenclass] = !status;
+      console.log(bmx);
+
+      if (status == true) {
+        for (index = 0; index < partsList.length; ++index) {
+        partsList[index].style.visibility = "hidden";
+        }
+      }
+        else{
+          for (index = 0; index < partsList.length; ++index) {
+          partsList[index].style.visibility = "visible";
+          }
+        }
+
+
     }
 
   // save BMX to local storage
