@@ -32,7 +32,7 @@
         chosenList[index].setAttribute("style", "display:block, background: pink");
       }
 
-    document.getElementById('partText').innerHTML = "Currently selected part is " + currentPart;
+    //document.getElementById('partText').innerHTML = "Currently selected part is " + currentPart;
   }
 
   // retro code for directly clicking on the bike
@@ -96,6 +96,26 @@
   function saveBike(){
     localStorage.setItem("bmx", JSON.stringify(bmx));
     console.log(bmx);
+
+    // load new pages
+
+    var retrievedData = localStorage.getItem("bmx");
+    var colourscheme = JSON.parse(retrievedData);
+    for (let [key, value] of Object.entries(colourscheme)) {
+        console.log(key + ':' + value);
+        var nextItem = key + ": " + value;
+        var identity = key + "-id";
+        document.getElementById(identity).innerHTML = nextItem;
+
+        for (index = 0; index < retrievedData.length; ++index) {
+
+          list = document.getElementsByClassName(key);
+          for (components = 0; components < list.length; ++components) {
+            list[components].setAttribute("fill", value);
+          }
+        }
+
+    }
   }
 
  // retrieve colour scheme from local storage
@@ -111,17 +131,39 @@ function showColours(){
     var retrievedData = localStorage.getItem("bmx");
     var colourscheme = JSON.parse(retrievedData);
     for (let [key, value] of Object.entries(colourscheme)) {
-        console.log(key + ':' + value);
-        var nextItem = key + ": " + value;
-        var identity = key + "-id";
-          document.getElementById(identity).innerHTML = nextItem;
+        //console.log(key + ':' + value);
+        //var nextItem = key + ": " + value;
+        //var identity = key + "-id";
+        //document.getElementById(identity).innerHTML = nextItem;
+
+        for (index = 0; index < retrievedData.length; ++index) {
+
+          list = document.getElementsByClassName(key);
+          for (components = 0; components < list.length; ++components) {
+            list[components].setAttribute("fill", value);
+          }
+        }
 
     }
-    console.log(colourscheme['frame']);
-    var frame = colourscheme['frame'];
-    alert("Frame colour is " + frame);
-    document.getElementById(frame).innerHTML = frame;
 }
+
+function changecol(chosen){
+    partsList = document.getElementsByClassName(currentPart);
+
+    //update relevant object value
+    bmx[currentPart] = chosen;
+
+    console.log(bmx);
+
+    //paint all relevant components
+    for (index = 0; index < partsList.length; ++index) {
+      partsList[index].setAttribute("fill", chosen);
+    }
+  }
+
+
+
+
 
 function closeModal(){
   document.getElementById("onboarding").style.display = "none";

@@ -37,3 +37,9 @@ myApp.onPageInit('track', function (page) {
 myApp.onPageInit('builder', function (page) {
 //  document.getElementById('zx2').innerHTML += '<div class="loading"></div>';
 });
+
+//Rewards hooks
+myApp.onPageInit('rewards', function (page) {
+//  document.getElementById('zx2').innerHTML += '<div class="loading"></div>';
+showColours();
+});
