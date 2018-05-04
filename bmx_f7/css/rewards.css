@@ -19,7 +19,8 @@
   background-position: center top;
   overflow: hidden;
 }
-.bmx-gen{
+.bmx-gen,
+.bmx-gen2{
   max-width: 80vw;
   padding: 15vw 20vw;
   margin-left: 5vw;
