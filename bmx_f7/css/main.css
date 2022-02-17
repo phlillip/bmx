@@ -168,6 +168,7 @@
   background: #000084;
   font-family: DOS, Monaco, Menlo, Consolas, "Courier New", monospace;
   text-align: center;
+  font-size:  0.8rem;
 }
 .toolbar::before{
   background-color: #aa5500;

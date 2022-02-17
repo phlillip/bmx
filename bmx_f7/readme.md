@@ -1,5 +1,9 @@
 # Online work
 
+cd to bmx_f7 and `npm install -g live-server && live-server` to run.
+https://aframe.io/docs/0.5.0/introduction/installation.html#use-a-local-server
+http://127.0.0.1:8080/
+
 ## PWA Demo
 
 Can be seen running at [https://demo.thepumptrack.com](https://demo.thepumptrack.com)
